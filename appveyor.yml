@@ -1,5 +1,4 @@
 version: '{branch}.{build}'
-image: Visual Studio 2017
 clone_depth: 3
 build: off
 test: off
@@ -36,12 +35,6 @@ init:
 
   # Newer versions of Windows require this for full use of psutil
   - diskperf -y
-
-  # Workaround for known limitation https://github.com/docker/for-win/issues/598#issuecomment-290365862
-  - ps: Get-NetNat | Remove-NetNat
-
-  # See what we get
-  - docker version
 
 install:
   - python -m pip install --upgrade --disable-pip-version-check pip virtualenv
