@@ -1,4 +1,5 @@
 version: '{branch}.{build}'
+image: Visual Studio 2017
 clone_depth: 3
 build: off
 test: off
